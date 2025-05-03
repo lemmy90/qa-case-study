@@ -1,0 +1,27 @@
+{
+  "name": "qa_case_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemmy90/qa-case-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lemmy90/qa-case-study/issues"
+  },
+  "homepage": "https://github.com/lemmy90/qa-case-study#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3"
+  }
+}
