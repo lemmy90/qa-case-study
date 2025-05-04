@@ -1,5 +1,5 @@
 import {test, expect, Page, APIResponse} from '@playwright/test';
-import { SignUpPage } from '../pageObjects/signUpPage';
+import { SignUpPage } from '../src/pages/signUpPage';
 
 // This test completes the registration process with 'Sweden' selected as Country
 // and verifies that account creation succeeds.
@@ -55,6 +55,12 @@ test('Check account with Sweden as a Country can be created', async ({ page }: {
 
     // Verify no errors in BE response
     const body = await response.json();
+    expect(body).toHaveProperty('activationAccountId');
     expect(body).toHaveProperty('errorCode');
+    expect(body).toHaveProperty('organizationId');
+    expect(body).toHaveProperty('registrationId');
+    expect(body.activationAccountId).toBeTruthy();
     expect(body.errorCode).toBe(0);
+    expect(body.organizationId).toBeTruthy();
+    expect(body.registrationId).toBeTruthy();
 });

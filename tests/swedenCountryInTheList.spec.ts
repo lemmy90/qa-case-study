@@ -1,5 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
-import { SignUpPage } from '../pageObjects/signUpPage';
+import { SignUpPage } from '../src/pages/signUpPage';
 
 // This test verifies the multi-step registration flow
 // and checks that 'Sweden' is present in the Country dropdown.
