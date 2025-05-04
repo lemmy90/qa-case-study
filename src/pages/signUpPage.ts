@@ -135,7 +135,7 @@ export class SignUpPage {
         await option.click({ force: true });
     }
 
-    /** Step 4: click Create Account button */
+    /** Step 3: click Create Account button */
     async clickCreateAccountButton(): Promise<void> {
         await this.createAccountButton.click();
     }
