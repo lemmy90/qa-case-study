@@ -28,5 +28,4 @@ test('Check that Sweden value exists in the Country list', async ({ page }: { pa
 
     // Check that 'Sweden' exists in the Country dropdown
     await expect(signUpPage.isCountryListed('Sweden')).resolves.toBe(true);
-    await signUpPage.setHowDidYouHearChannel('Event');
 });
